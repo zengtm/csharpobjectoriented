@@ -15,6 +15,10 @@ namespace lesson1
             Console.WriteLine("Hello, enter the year of your birthday please:");
             string s = System.Console.ReadLine();
 
+<<<<<<< HEAD
+=======
+            Console.WriteLine(s);
+>>>>>>> adb1982d8cf5a2631a835b1ffe74c42426c886c0
             this.y = Convert.ToInt32(s);
 
             DateTime dat = DateTime.Now;
