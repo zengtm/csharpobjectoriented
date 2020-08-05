@@ -28,10 +28,13 @@ namespace myapp
         }
 
         class Complex {
-            public float real {get; set; }
-            public float imaginary {get; set; }
+            public int IdProperty { get; }
+            private float real;
+            public float Real {get => real; set => real = value; }
+            private float imaginary;
+            public float Imaginary {get => imaginary; set => imaginary = value; }
 
-            public Complex (float a, float b) { real = a; imaginary = b; }
+            public Complex (float a, float b) { real = a; imaginary = b; IdProperty = 8; }
             public void Dump()
             {
                 Console.WriteLine("Real {0:E}, Imaginary {1:E}", real, imaginary);
@@ -48,6 +51,10 @@ namespace myapp
         {
             Complex c = new Complex(1, 2);
             c.Dump();
+
+            Console.WriteLine("IdProperty is {0:G}, Real part is {1:F}",
+                c.IdProperty, c.Real);
+
         }
 
     }
